@@ -4,6 +4,7 @@ import com.google.common.collect.Sets;
 import io.etrace.api.consts.RoleType;
 import io.etrace.api.model.po.user.ETraceUser;
 import io.etrace.api.model.po.user.ETraceUserPO;
+import io.etrace.api.model.po.user.UserConfigPO;
 import io.etrace.api.service.UserConfigService;
 import io.etrace.api.service.UserService;
 import io.swagger.annotations.Api;
@@ -43,9 +44,16 @@ public class UserController {
         throws Exception {
         // todo: 以前是内部的校验模式，有安全风险；之后前端来改掉 /info 的验证逻辑
         ETraceUser tempUser = new ETraceUser();
-        tempUser.setEmail("temp");
-        tempUser.setUserName("Temp User");
-        tempUser.setRoles(Sets.newHashSet(RoleType.USER.name()));
+        tempUser.setIsApiUser(true);
+        tempUser.setId(1L);
+        tempUser.setEmail("some111@abc.om");
+        tempUser.setUserName("admin");
+        tempUser.setRoles(Sets.newHashSet(RoleType.ADMIN.name()));
+        UserConfigPO userConfigPO=new UserConfigPO();
+        userConfigPO.setId(1L);
+        userConfigPO.setConfig("11");
+        userConfigPO.setUserEmail("some111@abc.om");
+        tempUser.setUserConfig(userConfigPO);
         return tempUser;
     }
 

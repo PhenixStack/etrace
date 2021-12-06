@@ -23,7 +23,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.Entity;
 
 @Data
-@Entity
+@Entity(name="user_config")
 @EqualsAndHashCode(callSuper = true)
 public class UserConfigPO extends BasePersistentObject {
     private String userEmail;

@@ -18,6 +18,7 @@ package io.etrace.collector.network.thrift;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
+import org.apache.thrift.TConfiguration;
 import org.apache.thrift.transport.TTransport;
 import org.apache.thrift.transport.TTransportException;
 
@@ -76,6 +77,21 @@ public class TNettyTransport extends TTransport {
     @Override
     public void flush() throws TTransportException {
         //nothing to do
+    }
+
+    @Override
+    public TConfiguration getConfiguration() {
+        return null;
+    }
+
+    @Override
+    public void updateKnownMessageSize(long l) throws TTransportException {
+
+    }
+
+    @Override
+    public void checkReadBytesAvailable(long l) throws TTransportException {
+
     }
 
     public void release() {

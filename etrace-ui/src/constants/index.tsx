@@ -63,7 +63,7 @@ export const CHART_DEFAULT_HEIGHT = 280; // 默认图表区域（canvas）高度
 
 /* api address */
 export const API_URL_TEST = "https://etrace-test/api/monitor";
-export const API_URL_PROD = "https://etrace-prod/api/monitor";
+export const API_URL_PROD = "http://localhost:8080";
 
 export const SIMPLE_JSON_URL_PROD = "https://etrace-prod/api/simplejson";
 export const PROMETHEUS_URL_TEST = "https://etrace-test/api/prometheus";

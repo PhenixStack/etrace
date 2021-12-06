@@ -20,8 +20,8 @@ import io.etrace.agent.config.CollectorRegistry;
 import io.etrace.common.message.agentconfig.Collector;
 import io.etrace.common.thrift.MessageService;
 import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.transport.TFramedTransport;
 import org.apache.thrift.transport.TSocket;
+import org.apache.thrift.transport.layered.TFramedTransport;
 
 public class ThriftConnection extends AbstractConnection {
 

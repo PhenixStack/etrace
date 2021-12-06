@@ -15,12 +15,15 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 public class Graph extends BaseItem {
 
-    private Object layout;
-    private Object config;
+    private String layout;
+    private String config;
     @Convert(converter = JpaConverterJson.class)
     private List<Long> nodeIds;
     @Convert(converter = JpaConverterJson.class)
     private List<Node> nodes;
     @Convert(converter = JpaConverterJson.class)
     private List<Relation> relations;
+    @Convert(converter = JpaConverterJson.class)
+    private List<Long> updateNodeIds;
+
 }

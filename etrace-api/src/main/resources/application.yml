@@ -9,8 +9,8 @@ spring:
     show-sql: true
   datasource:
     username: root
-    password: 123456
-    url: jdbc:mysql://mysql:3306/etrace
+    password: rootroot
+    url: jdbc:mysql://localhost:3306/etrace
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 management:

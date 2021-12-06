@@ -26,8 +26,8 @@ public class Node extends BaseItem {
     private List<Long> chartIds;
     @Convert(converter = JpaConverterJson.class)
     private List<ChartPO> charts;
-    private Object layout;
-    private Object config;
+    private String layout;
+    private String config;
 
     private String title;
 
@@ -43,5 +43,9 @@ public class Node extends BaseItem {
     private List<String> groupBy;
     @Convert(converter = JpaConverterJson.class)
     private Map<String, Object> singleNodeConfig;
+
+    @Convert(converter = JpaConverterJson.class)
+    private List<Long> updateChartIds;
+
 
 }

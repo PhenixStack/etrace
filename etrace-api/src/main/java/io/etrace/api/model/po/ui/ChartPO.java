@@ -28,7 +28,7 @@ import javax.persistence.Convert;
 import javax.persistence.Entity;
 import java.util.List;
 
-@Entity
+@Entity(name = "chart")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class ChartPO extends BaseItem {
