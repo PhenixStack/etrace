@@ -21,3 +21,5 @@
     3. Docker
 
 2. Run the shell `local_dev.sh`. Follow the instruction to run _ETrace_ and related dependencies in Docker. 
+
+3.127.0.0.1 emonitor.local.elenet.me
